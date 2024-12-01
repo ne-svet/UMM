@@ -1,0 +1,239 @@
+/*общие настройки*/
+
+body {
+    
+}
+
+/*Область СТА*/
+.card-title-cta {
+    font-family: 'Bowlby One'; /* Применяем шрифт */
+    font-size: 52px; /* Высота текста */
+    color: #c553fa; /* Цвет текста */
+}
+
+
+.card-cta {
+	border: none; /* Убираем рамку */
+	background-color: #f0f0f0;
+}
+
+/* Кнопка Get Started*/
+
+.btn-cta {
+    background-color: #000000; /* Цвет фона кнопки */
+    border-color: #000000;    /* Цвет границы */
+    color: #dbfa01;              /* Цвет текста */
+	border-radius: 50px; /* Большое округление */
+    border-width: 2px; /* Толщина обводки */
+    padding: 10px 40px; /* Отступы внутри кнопки */
+    font-size: 1.25rem; /* Увеличенный шрифт */
+	
+}
+
+.btn-cta:hover {
+    background-color: #c553fa; /* Цвет кнопки при наведении */
+    border-color: #c553fa;  /* Цвет границы при наведении */
+    color: #dbfa01;  	
+}
+
+/* Заголовки */
+
+.highlight-text-green {
+        display: inline-block;
+        box-shadow: inset 0 -15px 0 #dbfa01; /* Создает внутреннюю тень */
+        line-height: 1;
+        padding: 0 80px;
+    }
+	
+.highlight-text-pink {
+        display: inline-block;
+        box-shadow: inset 0 -15px 0 #c553fa; /* Создает внутреннюю тень */
+        line-height: 1;
+        padding: 0 80px;
+    }
+	
+
+/* Карточки с контентом */
+
+/* Для секции с карточками */
+#services .container {
+    max-width: 100%; /* Убираем ограничение ширины контейнера */
+    padding: 0; /* Убираем отступы по бокам, чтобы карточки могли растягиваться */
+}
+
+.features {
+    display: flex;
+	flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+	gap: 15px 0; /* Меньшие отступы между карточками */
+    justify-content: center; /* Выравнивание карточек по центру */
+    
+    
+}
+
+.features .card {
+    display: flex;
+    flex-direction: column; /* Содержимое карточки организуем по вертикали */
+    justify-content: space-between; /* Распределяем содержимое по вертикали */
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Белый фон для карточек */
+    border: 1px solid #ddd; /* Легкая граница */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0px 4px 10px rgba(197, 83, 250, 0.6); /* Неоновая тень */
+    transition: box-shadow 0.3s ease-in-out; /* Плавное изменение тени */
+    padding: 15px; /* Уменьшаем padding для меньших отступов */
+    width: 100%; /* Карточки по ширине контейнера */
+    max-width: 280px; /* Ограничиваем максимальную ширину */
+    height: 100%; /* Каждая карточка будет иметь одинаковую высоту */
+    flex-grow: 1; /* Все карточки растягиваются одинаково по высоте */
+}
+
+.features .service-card {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание содержимого карточки */
+    justify-content: space-between; /* Равномерное распределение */
+    align-items: center; /* Центрирует элементы внутри карточки */
+    text-align: center;
+    background-color: #fff; /* Белый фон для карточек */
+    border: 1px solid #ddd; /* Тонкая граница */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0px 4px 10px rgba(197, 83, 250, 0.6); /* Неоновая тень */
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%; /* Ширина карточки будет адаптироваться */
+    max-width: 600px; /* Ограничиваем максимальную ширину карточки */
+    margin: 0 auto; /* Центрирует карточки внутри колонки */
+    padding: 25px; /* Увеличиваем отступы внутри карточек для улучшения внешнего вида */
+    margin-bottom: 20px; /* Отступ снизу между карточками */
+}
+
+
+
+/* Переопределяем отступы между карточками для .service-card */
+.features .service-card + .service-card {
+    margin-left: 15px; /* Отступ между карточками по горизонтали */
+}
+
+
+    .features .card img, .service-card img {
+        max-height: 80px;
+        margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .service-card img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain; /* Сохраняет пропорции */
+    }
+
+/* Галерея */
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+	
+.container-carusel {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .carousel-inner .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .carousel-inner .col-12 {
+        flex: 0 0 100%; /* Показывать одно изображение */
+    }
+}
+
+/*Стрелки карусели*/
+
+/* Базовые стили для стрелок */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+/* Для маленьких экранов */
+.carousel-control-prev {
+    left: -5rem;
+}
+
+.carousel-control-next {
+    right: -5rem;
+}
+
+/* Для очень маленьких экранов */
+@media (min-width: 992px) {
+    .carousel-control-prev {
+        left: -9rem;
+    }
+
+    .carousel-control-next {
+        right: -9rem;
+    }
+}
+
+/* Для больших экранов */
+@media (max-width: 575px) {
+    .carousel-control-prev {
+        left: -2rem;
+    }
+
+    .carousel-control-next {
+        right: -2rem;
+    }
+}
+
+/* Логотипы */
+.logo {
+    max-width: 50%; /* Устанавливает ширину в рамках колонки */
+    height: auto; /* Сохраняет пропорции */
+    object-fit: contain; /* Масштабирует логотипы, сохраняя пропорции */
+    padding: 10px; /* Отступы вокруг логотипа */
+}
+
+/* Футер */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+/* Адаптивность для разных размеров экранов */
+@media (max-width: 992px) {
+    .features .card {
+        flex: 1 1 calc(33.33% - 20px); /* Для экранов среднего размера карточки занимают по 33% */
+    }
+}
+
+@media (max-width: 768px) {
+    .features .card {
+        flex: 1 1 calc(50% - 20px); /* Для мобильных экранов карточки занимают по 50% */
+    }
+}
+
+@media (max-width: 576px) {
+    .features .card {
+        flex: 1 1 100%; /* Для очень маленьких экранов карточки занимают всю ширину */
+    }
+}
